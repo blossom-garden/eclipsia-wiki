@@ -1,5 +1,19 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig, passthroughImageService } from "astro/config";
+import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+  vite: {
+    plugins: [tailwindcss()],
+    server: {
+      watch: {
+        ignored: ["**/.direnv/**"],
+      },
+    },
+  },
+  image: {
+    service: passthroughImageService(),
+  },
+  site: "https://kodiitulip.github.io",
+});
