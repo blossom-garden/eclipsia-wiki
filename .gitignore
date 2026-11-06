@@ -24,3 +24,7 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 .direnv/
+
+
+.obsidian
+.trash

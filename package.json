@@ -13,9 +13,11 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.4",
+    "astro-loader-obsidian": "^0.10.0",
     "astro-seo": "^1.2.0",
     "astro": "^7.4.7",
     "@lucide/astro": "^1.69.0",
+    "hast-util-from-html": "^2.0.3",
     "tailwindcss": "^4.3.4"
   }
 }

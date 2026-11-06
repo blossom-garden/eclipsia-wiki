@@ -1,0 +1,55 @@
+---
+import { SEO } from "astro-seo";
+
+interface Props {
+  title?: string;
+}
+
+const description = "A Wiki for all things in the Eclipsia Modpack!";
+const { SITE: site, BASE_URL: base, DEV } = import.meta.env;
+const baseURL = new URL(base, DEV ? "http://localhost:4321/" : site);
+const basedURL = (href: string = "") => {
+  const r = new URL(baseURL);
+  r.pathname += href;
+  return r;
+};
+
+const { title = "Info" } = Astro.props;
+const OGImage = basedURL("./ogimage.png");
+const FaviconSVG = basedURL("./favicon.svg");
+const FaviconICO = basedURL("./favicon.ico");
+const Sitemap = basedURL("./sitemap-index.xml");
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/x-icon" sizes="256x256" href={FaviconICO} />
+    <link rel="icon" type="image/svg+xml" sizes="any" href={FaviconSVG} />
+    <link rel="sitemap" href={Sitemap} />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <SEO
+      title={`Eclipsia | ${title}`}
+      description={description}
+      openGraph={{
+        basic: {
+          type: "website",
+          title: `Eclipsia | ${title}`,
+          image: OGImage.toString(),
+          url: basedURL(""),
+        },
+        optional: {
+          description,
+          locale: "en",
+        },
+      }}
+    />
+    <slot name="head" />
+  </head>
+  <body class="items-center flex flex-col">
+    <main class="flex-1 max-w-175">
+      <slot />
+    </main>
+  </body>
+</html>

@@ -4,6 +4,9 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://eclipsia.undo.it/",
+  base: "",
+
   vite: {
     plugins: [tailwindcss()],
     server: {
@@ -15,5 +18,4 @@ export default defineConfig({
   image: {
     service: passthroughImageService(),
   },
-  site: "https://kodiitulip.github.io",
 });
