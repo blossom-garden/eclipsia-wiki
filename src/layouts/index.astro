@@ -23,7 +23,7 @@ const FaviconICO = basedURL("./favicon.ico");
 const Sitemap = basedURL("./sitemap-index.xml");
 ---
 
-<html lang="en" class="h-full">
+<html lang="en" class="h-full bg-black">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/x-icon" sizes="256x256" href={FaviconICO} />
@@ -49,10 +49,16 @@ const Sitemap = basedURL("./sitemap-index.xml");
     />
     <slot name="head" />
   </head>
-  <body class="items-center flex flex-col gap-8 bg-pink-orchid-900 h-full">
-    <aside class="h-16 w-full bg-dusty-mauve-800/70 border-b-2 border-dusty-mauve-600 shadow-2xl"></aside>
-    <main class:list={["flex-1 px-12 border-dusty-mauve-600 border-2 shadow-2xl", classList]}>
+  <body class="items-center flex flex-col gap-8 bg-dark-amethyst-900/70 h-full">
+    <aside class="h-16 w-full bg-crimson-violet-800/70 border-b-2 border-dusty-mauve-600 shadow-2xl"></aside>
+    <main
+      class:list={[
+        "flex-1 px-12 bg-crimson-violet-800/70 border-2 border-crimson-violet-600/50 rounded-2xl shadow-2xl",
+        classList,
+      ]}
+    >
       <slot />
     </main>
+    <footer></footer>
   </body>
 </html>

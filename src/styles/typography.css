@@ -1,5 +1,6 @@
 @utility prose {
   --tw-prose-body: var(--color-slate-700);
+  --tw-prose-body-selection: var(--color-slate-300);
   --tw-prose-headings: var(--color-slate-900);
   --tw-prose-lead: var(--color-slate-600);
   --tw-prose-links: var(--color-slate-900);
@@ -19,6 +20,7 @@
   --tw-prose-td-borders: var(--color-slate-200);
 
   --tw-prose-invert-body: var(--color-slate-300);
+  --tw-prose-invert-body-selection: var(--color-slate-700);
   --tw-prose-invert-headings: var(--color-white);
   --tw-prose-invert-lead: var(--color-slate-400);
   --tw-prose-invert-links: var(--color-white);
@@ -37,7 +39,7 @@
   --tw-prose-invert-th-borders: var(--color-slate-600);
   --tw-prose-invert-td-borders: var(--color-slate-700);
 
-  @apply text-base text-(--tw-prose-body) max-w-[80ch];
+  @apply text-base text-(--tw-prose-body) max-w-[80ch] selection:text-(--tw-prose-body-selection) selection:bg-(--tw-prose-body);
 
   & > :first-child {
     @apply pl-0;
@@ -318,6 +320,7 @@
 
 @utility prose-invert {
   --tw-prose-body: var(--tw-prose-invert-body);
+  --tw-prose-body-selection: var(--tw-prose-invert-body-selection);
   --tw-prose-headings: var(--tw-prose-invert-headings);
   --tw-prose-lead: var(--tw-prose-invert-lead);
   --tw-prose-links: var(--tw-prose-invert-links);
@@ -337,44 +340,46 @@
   --tw-prose-td-borders: var(--tw-prose-invert-td-borders);
 }
 
-@utility prose-royal-violet {
-  --tw-prose-body: var(--color-royal-violet-700);
-  --tw-prose-headings: var(--color-royal-violet-900);
-  --tw-prose-lead: var(--color-royal-violet-600);
-  --tw-prose-links: var(--color-royal-violet-900);
-  --tw-prose-bold: var(--color-royal-violet-900);
-  --tw-prose-counters: var(--color-royal-violet-500);
-  --tw-prose-bullets: var(--color-royal-violet-300);
-  --tw-prose-hr: var(--color-royal-violet-200);
-  --tw-prose-quotes: var(--color-royal-violet-900);
-  --tw-prose-quote-borders: var(--color-royal-violet-200);
-  --tw-prose-captions: var(--color-royal-violet-500);
-  --tw-prose-kbd: var(--color-royal-violet-900);
-  --tw-prose-kbd-shadows: color-mix(in oklab, var(--color-royal-violet-900) 10%, transparent);
-  --tw-prose-code: var(--color-royal-violet-900);
-  --tw-prose-pre-code: var(--color-royal-violet-200);
-  --tw-prose-pre-bg: var(--color-royal-violet-800);
-  --tw-prose-th-borders: var(--color-royal-violet-300);
-  --tw-prose-td-borders: var(--color-royal-violet-200);
+@utility prose-dark-amethyst {
+  --tw-prose-body: var(--color-dark-amethyst-700);
+  --tw-prose-body-selection: var(--color-dark-amethyst-300);
+  --tw-prose-headings: var(--color-dark-amethyst-900);
+  --tw-prose-lead: var(--color-dark-amethyst-600);
+  --tw-prose-links: var(--color-dark-amethyst-900);
+  --tw-prose-bold: var(--color-dark-amethyst-900);
+  --tw-prose-counters: var(--color-dark-amethyst-500);
+  --tw-prose-bullets: var(--color-dark-amethyst-300);
+  --tw-prose-hr: var(--color-dark-amethyst-200);
+  --tw-prose-quotes: var(--color-dark-amethyst-900);
+  --tw-prose-quote-borders: var(--color-dark-amethyst-200);
+  --tw-prose-captions: var(--color-dark-amethyst-500);
+  --tw-prose-kbd: var(--color-dark-amethyst-900);
+  --tw-prose-kbd-shadows: color-mix(in oklab, var(--color-dark-amethyst-900) 10%, transparent);
+  --tw-prose-code: var(--color-dark-amethyst-900);
+  --tw-prose-pre-code: var(--color-dark-amethyst-200);
+  --tw-prose-pre-bg: var(--color-dark-amethyst-800);
+  --tw-prose-th-borders: var(--color-dark-amethyst-300);
+  --tw-prose-td-borders: var(--color-dark-amethyst-200);
 
-  --tw-prose-invert-body: var(--color-royal-violet-300);
+  --tw-prose-invert-body: var(--color-dark-amethyst-300);
+  --tw-prose-invert-body-selection: var(--color-dark-amethyst-700);
   --tw-prose-invert-headings: var(--color-white);
-  --tw-prose-invert-lead: var(--color-royal-violet-400);
+  --tw-prose-invert-lead: var(--color-dark-amethyst-400);
   --tw-prose-invert-links: var(--color-white);
   --tw-prose-invert-bold: var(--color-white);
-  --tw-prose-invert-counters: var(--color-royal-violet-400);
-  --tw-prose-invert-bullets: var(--color-royal-violet-600);
-  --tw-prose-invert-hr: var(--color-royal-violet-700);
-  --tw-prose-invert-quotes: var(--color-royal-violet-100);
-  --tw-prose-invert-quote-borders: var(--color-royal-violet-700);
-  --tw-prose-invert-captions: var(--color-royal-violet-400);
+  --tw-prose-invert-counters: var(--color-dark-amethyst-400);
+  --tw-prose-invert-bullets: var(--color-dark-amethyst-600);
+  --tw-prose-invert-hr: var(--color-dark-amethyst-700);
+  --tw-prose-invert-quotes: var(--color-dark-amethyst-100);
+  --tw-prose-invert-quote-borders: var(--color-dark-amethyst-700);
+  --tw-prose-invert-captions: var(--color-dark-amethyst-400);
   --tw-prose-invert-kbd: var(--color-white);
   --tw-prose-invert-kbd-shadows: color-mix(in oklab, var(--color-white) 10%, transparent);
   --tw-prose-invert-code: var(--color-white);
-  --tw-prose-invert-pre-code: var(--color-royal-violet-300);
+  --tw-prose-invert-pre-code: var(--color-dark-amethyst-300);
   --tw-prose-invert-pre-bg: color-mix(in oklab, var(--color-black) 50%, transparent);
-  --tw-prose-invert-th-borders: var(--color-royal-violet-600);
-  --tw-prose-invert-td-borders: var(--color-royal-violet-700);
+  --tw-prose-invert-th-borders: var(--color-dark-amethyst-600);
+  --tw-prose-invert-td-borders: var(--color-dark-amethyst-700);
 }
 
 @utility prose-pink-orchid {
@@ -417,34 +422,34 @@
   --tw-prose-invert-td-borders: var(--color-pink-orchid-700);
 }
 
-@custom-variant prose-headings (&:where(.prose :is(h1, h2, h3, h4, th)));
-@custom-variant prose-lead (&:where(.prose [class~="lead"]));
-@custom-variant prose-h1 (&:where(.prose h1));
-@custom-variant prose-h2 (&:where(.prose h2));
-@custom-variant prose-h3 (&:where(.prose h3));
-@custom-variant prose-h4 (&:where(.prose h4));
-@custom-variant prose-p (&:where(.prose p));
-@custom-variant prose-a (&:where(.prose a));
-@custom-variant prose-blockquote (&:where(.prose blockquote));
-@custom-variant prose-figure (&:where(.prose figure));
-@custom-variant prose-figcaption (&:where(.prose figcaption));
-@custom-variant prose-strong (&:where(.prose strong));
-@custom-variant prose-em (&:where(.prose em));
-@custom-variant prose-kbd (&:where(.prose kbd));
-@custom-variant prose-code (&:where(.prose code));
-@custom-variant prose-pre (&:where(.prose pre));
-@custom-variant prose-ol (&:where(.prose ol));
-@custom-variant prose-ul (&:where(.prose ul));
-@custom-variant prose-li (&:where(.prose li));
-@custom-variant prose-dl (&:where(.prose dl));
-@custom-variant prose-dd (&:where(.prose dd));
-@custom-variant prose-dt (&:where(.prose dt));
-@custom-variant prose-table (&:where(.prose table));
-@custom-variant prose-thead (&:where(.prose thead));
-@custom-variant prose-tr (&:where(.prose tr));
-@custom-variant prose-th (&:where(.prose th));
-@custom-variant prose-td (&:where(.prose td));
-@custom-variant prose-img (&:where(.prose img));
-@custom-variant prose-picture (&:where(.prose picture));
-@custom-variant prose-video (&:where(.prose video));
-@custom-variant prose-hr (&:where(.prose hr));
+@custom-variant prose-headings (& :is(:where(h1, h2, h3, h4, th)));
+@custom-variant prose-lead (& :is(:where([class~="lead"])));
+@custom-variant prose-h1 (& :is(:where(h1)));
+@custom-variant prose-h2 (& :is(:where(h2)));
+@custom-variant prose-h3 (& :is(:where(h3)));
+@custom-variant prose-h4 (& :is(:where(h4)));
+@custom-variant prose-p (& :is(:where(p)));
+@custom-variant prose-a (& :is(:where(a)));
+@custom-variant prose-blockquote (& :is(:where(blockquote)));
+@custom-variant prose-figure (& :is(:where(figure)));
+@custom-variant prose-figcaption (& :is(:where(figcaption)));
+@custom-variant prose-strong (& :is(:where(strong)));
+@custom-variant prose-em (& :is(:where(em)));
+@custom-variant prose-kbd (& :is(:where(kbd)));
+@custom-variant prose-code (& :is(:where(code)));
+@custom-variant prose-pre (& :is(:where(pre)));
+@custom-variant prose-ol (& :is(:where(ol)));
+@custom-variant prose-ul (& :is(:where(ul)));
+@custom-variant prose-li (& :is(:where(li)));
+@custom-variant prose-dl (& :is(:where(dl)));
+@custom-variant prose-dd (& :is(:where(dd)));
+@custom-variant prose-dt (& :is(:where(dt)));
+@custom-variant prose-table (& :is(:where(table)));
+@custom-variant prose-thead (& :is(:where(thead)));
+@custom-variant prose-tr (& :is(:where(tr)));
+@custom-variant prose-th (& :is(:where(th)));
+@custom-variant prose-td (& :is(:where(td)));
+@custom-variant prose-img (& :is(:where(img)));
+@custom-variant prose-picture (& :is(:where(picture)));
+@custom-variant prose-video (& :is(:where(video)));
+@custom-variant prose-hr (& :is(:where(hr)));

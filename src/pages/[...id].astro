@@ -36,13 +36,14 @@ page.rendered;
       {crumb}
     </a>
   ))}
-  <article class="prose prose-pink-orchid prose-invert">
+  <article class="prose prose-dark-amethyst min-w-180 prose-invert prose-h1:first-of-type:bg-dark-amethyst-700/80 prose-h1:first-of-type:w-min prose-h1:first-of-type:px-6 prose-h1:first-of-type:rounded-full prose-h1:first-of-type:select-none prose-h1:first-of-type:whitespace-nowrap">
     {cover && (
       <Picture
         alt={`${title} cover`}
         src={cover}
         width={700}
         loading="eager"
+        class="drop-shadow-xl drop-shadow-black/60"
         pictureAttributes={{
           title: `${title} Cover Image`,
         }}
