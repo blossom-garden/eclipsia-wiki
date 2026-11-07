@@ -1,0 +1,64 @@
+@import "tailwindcss";
+@import "typography.css";
+
+@theme base {
+  --color-royal-violet-50: oklch(94.48% 0.025 303.49);
+  --color-royal-violet-100: oklch(89.05% 0.053 303.74);
+  --color-royal-violet-200: oklch(78.24% 0.105 302.52);
+  --color-royal-violet-300: oklch(67.5% 0.16 300.82);
+  --color-royal-violet-400: oklch(57.51% 0.209 298.03);
+  --color-royal-violet-500: oklch(48.92% 0.244 292.62);
+  --color-royal-violet-600: oklch(41.83% 0.205 293.47);
+  --color-royal-violet-700: oklch(34.34% 0.164 294.02);
+  --color-royal-violet-800: oklch(26.45% 0.119 295.2);
+  --color-royal-violet-900: oklch(17.96% 0.071 297.55);
+  --color-royal-violet-950: oklch(15.17% 0.055 298.37);
+
+  --color-amethyst-50: oklch(95.36% 0.019 317.73);
+  --color-amethyst-100: oklch(90.89% 0.036 317.31);
+  --color-amethyst-200: oklch(81.68% 0.077 317.61);
+  --color-amethyst-300: oklch(72.58% 0.115 317.33);
+  --color-amethyst-400: oklch(63.7% 0.157 317.21);
+  --color-amethyst-500: oklch(55.38% 0.191 316.58);
+  --color-amethyst-600: oklch(47.27% 0.161 316.72);
+  --color-amethyst-700: oklch(38.72% 0.126 316.65);
+  --color-amethyst-800: oklch(29.76% 0.092 316.91);
+  --color-amethyst-900: oklch(20.06% 0.05 316.72);
+  --color-amethyst-950: oklch(16.85% 0.039 317.91);
+
+  --color-dusty-mauve-50: oklch(95.79% 0.008 337.44);
+  --color-dusty-mauve-100: oklch(91.63% 0.018 339.95);
+  --color-dusty-mauve-200: oklch(83.16% 0.037 338.71);
+  --color-dusty-mauve-300: oklch(74.56% 0.057 339.92);
+  --color-dusty-mauve-400: oklch(66.08% 0.077 340.4);
+  --color-dusty-mauve-500: oklch(57.24% 0.098 341.24);
+  --color-dusty-mauve-600: oklch(49% 0.082 341.37);
+  --color-dusty-mauve-700: oklch(40.04% 0.066 341.61);
+  --color-dusty-mauve-800: oklch(30.8% 0.047 340.77);
+  --color-dusty-mauve-900: oklch(20.75% 0.026 342.09);
+  --color-dusty-mauve-950: oklch(17.4% 0.019 339.35);
+
+  --color-rosy-taupe-50: oklch(95.9% 0.005 17.25);
+  --color-rosy-taupe-100: oklch(91.57% 0.012 11.01);
+  --color-rosy-taupe-200: oklch(83.13% 0.023 10.7);
+  --color-rosy-taupe-300: oklch(74.39% 0.037 11.42);
+  --color-rosy-taupe-400: oklch(65.58% 0.049 13.48);
+  --color-rosy-taupe-500: oklch(56.55% 0.066 14.23);
+  --color-rosy-taupe-600: oklch(48.32% 0.054 14.32);
+  --color-rosy-taupe-700: oklch(39.65% 0.044 12.87);
+  --color-rosy-taupe-800: oklch(30.53% 0.03 15.67);
+  --color-rosy-taupe-900: oklch(20.6% 0.018 12.72);
+  --color-rosy-taupe-950: oklch(17.34% 0.012 8.81);
+
+  --color-pink-orchid-50: oklch(95.73% 0.011 348.43);
+  --color-pink-orchid-100: oklch(91.35% 0.021 347.32);
+  --color-pink-orchid-200: oklch(82.51% 0.047 348.07);
+  --color-pink-orchid-300: oklch(73.73% 0.071 349.08);
+  --color-pink-orchid-400: oklch(64.93% 0.1 350.45);
+  --color-pink-orchid-500: oklch(56.42% 0.126 352.29);
+  --color-pink-orchid-600: oklch(48.14% 0.106 352.19);
+  --color-pink-orchid-700: oklch(39.5% 0.082 351.9);
+  --color-pink-orchid-800: oklch(30.34% 0.06 351.57);
+  --color-pink-orchid-900: oklch(20.5% 0.031 350.53);
+  --color-pink-orchid-950: oklch(17.37% 0.023 353.1);
+}

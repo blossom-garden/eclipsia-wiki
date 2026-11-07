@@ -1,0 +1,47 @@
+{
+    // Folder-specific settings
+    //
+    // For a full list of overridable settings, and general information on folder-specific settings,//zed.dev/docs/configuring-zed#settings-files
+    "languages": {
+        "CSS": {
+            "inlay_hints": {
+                "show_background": true,
+            },
+            "line_ending": "prefer_lf",
+            "format_on_save": "on",
+            "preferred_line_length": 100,
+            "soft_wrap": "editor_width",
+            "tab_size": 2,
+        },
+        "TypeScript": {
+            "inlay_hints": {
+                "show_background": true,
+            },
+            "line_ending": "prefer_lf",
+            "format_on_save": "on",
+            "preferred_line_length": 100,
+            "soft_wrap": "editor_width",
+            "tab_size": 2,
+        },
+        "JavaScript": {
+            "inlay_hints": {
+                "show_background": true,
+            },
+            "line_ending": "prefer_lf",
+            "format_on_save": "on",
+            "preferred_line_length": 100,
+            "soft_wrap": "editor_width",
+            "tab_size": 2,
+        },
+        "Astro": {
+            "inlay_hints": {
+                "show_background": true,
+            },
+            "line_ending": "prefer_lf",
+            "format_on_save": "on",
+            "preferred_line_length": 100,
+            "soft_wrap": "editor_width",
+            "tab_size": 2,
+        },
+    },
+}

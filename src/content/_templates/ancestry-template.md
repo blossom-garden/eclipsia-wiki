@@ -2,7 +2,7 @@
 title: <% tp.user.to_pascal_case(await tp.user.get_or_ask_for_title(tp)) %>
 tags:
   - ancestry
-last-update: <% tp.date.now() %>
+
 cover: ""
 ---
 

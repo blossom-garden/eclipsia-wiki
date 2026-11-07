@@ -1,33 +1,54 @@
 ---
+import Index from "@/layouts/index.astro";
+import { Picture } from "astro:assets";
 import { getCollection, render } from "astro:content";
 
 export async function getStaticPaths() {
   const wikis = await getCollection("wikipages");
+
   return wikis.map((page) => ({
     params: { id: page.id },
     props: { page },
   }));
 }
-// 2. For your template, you can get the entry directly from the prop
+
 const { page } = Astro.props;
+const backlinks = page.id.split("/");
+const { title, cover } = page.data;
 const { Content } = await render(page);
+
+const { BASE_URL, DEV, SITE } = import.meta.env;
+
+const baseURL = new URL(BASE_URL, DEV ? "http://localhost:4321/" : SITE);
+
+const breadcrumb = (index: number, array: string[]) => {
+  const r = new URL(baseURL);
+  r.pathname += array.slice(0, index + 1).join("/");
+  return r;
+};
+
+page.rendered;
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-    <style>
-      @import "tailwindcss";
-    </style>
-  </head>
-  <body>
-    <a href="/">Astro</a>
-    <h1>{page.data.title}</h1>
+<Index title={title} class="">
+  {backlinks.map((crumb, index, array) => (
+    <a href={breadcrumb(index, array)} class="mx-4">
+      {crumb}
+    </a>
+  ))}
+  <article class="prose prose-pink-orchid prose-invert">
+    {cover && (
+      <Picture
+        alt={`${title} cover`}
+        src={cover}
+        width={700}
+        loading="eager"
+        pictureAttributes={{
+          title: `${title} Cover Image`,
+        }}
+      />
+    )}
+    <h1>{title}</h1>
     <Content />
-  </body>
-</html>
+  </article>
+</Index>

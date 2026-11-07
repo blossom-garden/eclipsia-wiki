@@ -19,7 +19,7 @@ const loadObsidianMarkdown = (opts: ObsidianMdLoaderOptions): Loader => {
 const wikipages = defineCollection({
   loader: loadObsidianMarkdown({
     base: "src/content",
-    url: "wiki",
+    url: "",
     pattern: ["**/*.{md,mdx}", "!**/_templates/**"],
     brokenLinksStrategy: "label",
   }),
@@ -28,7 +28,6 @@ const wikipages = defineCollection({
       title: z.string(),
       tags: z.array(z.string()).optional().default([]),
       cover: image().optional().nullable(),
-      "last-update": z.coerce.date().optional().default(new Date()),
     }),
 });
 
